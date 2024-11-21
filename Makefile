@@ -13,7 +13,8 @@ LDFLAGS= -lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system
 SRC_DIR=src
 TEST_DIR=tests
 
-SRC=$(wildcard $(SRC_DIR)/*.cpp)
+SRC=$(wildcard $(SRC_DIR)/*.cpp \
+	$(SRC_DIR)/classes/*.cpp $(SRC_DIR)/player/*.cpp)
 TESTS=$(wildcard $(TEST_DIR)/*.c)
 NAME=my_program
 TRASH= *.gcno *.gcda test_runner *.info
